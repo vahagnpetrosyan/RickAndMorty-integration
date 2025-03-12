@@ -7,12 +7,10 @@ from .settings import Settings
 
 class RickAndMortyApp:
     def __init__(self):
-        
         self._app = FastAPI(
-            title="Rick & Morty Data Service (Class-Based w/ separate file)"
+            title="Rick & Morty Data integration"
         )
         self.settings = Settings()
-        self.settings.DATA_DIR = "data"
         os.makedirs(self.settings.DATA_DIR, exist_ok=True)
         self.setup_routes()
 
